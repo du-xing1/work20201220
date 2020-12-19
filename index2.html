@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <meta charset="utf-8" />
+    <title>2019012432-贾伟东</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/css.css" />
+</head>
+ 
+<body>
+    <div class="frame">
+    <button onclick="topFunction()" id="myBtn" title="回顶部">返回顶部</button>
+    <header>
+        <div>
+            <div id="cont"></div>
+            <div id="title">Hello World</div>
+            <div id="titlebottom">
+                Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life. 
+            </div>
+            <div id="login">
+                <div>CREATE YOUR ACCOUNT</div>
+                <div>IT IS ABSOLUTELY FREE</div>
+                <div>
+                    <input type="text" placeholder="please input user name">
+                    <input type="password" placeholder="Create your password">
+                    <input type="submit" value="SIGN UP">
+                </div>
+            </div>
+        </div>
+    </header>
+ 
+   
+    <section>
+        <div id="container">
+            <div>Make your life colorful</div>
+            <div id="box">
+                <div>
+                    <img src="./image/2.png" />
+                    <p>People who read are more aware of their shortcomings. The more you read and learn,the more you feel that your knowledge is limited, and the more you feel that you have too many shortcomings.</p>
+                </div>
+                <div>
+                    <img src="./image/3.png" />
+                    <p>letter writing can be survived instead of text messages which may be forget immediately and even will never be remembered.Letter writing can be a collection which can be treated as one symbol.</p>
+                </div>
+                <div>
+                    <img src="./image/4.png" />
+                    <p>running is the best way to strong the heart and ensure the efficient flow of blood and oxygen throughout the body. Furthermore,likewise increasing bone density to prevent osteoporosis as well.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    
+    <section>
+        <div id="crew">
+            <div>Passion for life</div>
+            <div>From now on, try to be a lovely person, don't envy whom, don't complain whom, in our own way, enjoy our own scenery, meet our own happiness</div>
+            <div id="crewphoto">
+                <img id="pic" src="./image/5.png" onmouseover="bigger()" onmouseout="smaller()"/>
+                <img class="pic" src="./image/6.png" onmouseover="bigger()" onmouseout="smaller()"/>
+                <img class="pic" src="./image/7.png" onmouseover="bigger()" onmouseout="smaller()"/>
+                <img class="pic" src="./image/8.png" onmouseover="bigger()" onmouseout="smaller()"/>
+            </div>
+        </div>
+    </section>
+ 
+    <section id="contacts">
+        <div>
+            <div>
+                <div id="fell">FELL FREE TO WRITE US</div>
+                <input type="email" id="email" placeholder="E-mail" class="mail"/ >
+                 <p class="par1"></p>
+                <input type="text" id="subject" placeholder="Subject" class="subject" />
+                <p class="par2"></p>
+                <input type="text" id="message" placeholder="Message" />
+                <input type="submit" id="send" value="SEND" />
+            </div>
+            <div>
+                <div id="con">
+                    <p>Contacts</p>
+                    <p>Make any design your own using the Style
+                        <br/>Editor.Personalize fonts, colors, and layouts to
+                        <br/>create the custom look you want.</p>
+                    <p>
+                        Address：360 King Street
+                        <br/>Feastrvale Trevose, PA 19057</p>
+                    <p>
+                        Tel：123456</p>
+                    <p>
+                        E-mail：yourname@mail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <footer>
+        <div>
+            <div>
+                <p>LEARN MORE</p>
+                <p>How it works?</p>
+                <p>Meeting tools</p>
+                <p>Live streaming</p>
+                <p>Contact Method</p>
+            </div>
+            <div>
+                <p>ABOUT US</p>
+                <P>About us</P>
+                <p>Features</p>
+                <p>Privacy police</p>
+                <p>Terms & Conditions</p>
+            </div>
+            <div>
+                <p>SUPPORT</p>
+                <p>FAQ</p>
+                <p>Contact us</p>
+                <p>Live chat</p>
+                <p>Phone call</p>
+            </div>
+            <div>
+                <p>ENJOY YOUR LIFE</p>
+                <p>Create web UI kit for designers,
+                    <br/>freelancers or business.</p>
+                
+            </div>
+        </div>
+    </footer>
+ 	</div>
+</body>
+
+ <script type="text/javascript">
+//获取时间
+var tew=document.getElementById('cont')
+    function getTime(){         
+        var date=new Date();
+
+        var year=date.getFullYear();
+        var month=date.getMonth();
+        var day=date.getDate();
+
+        var hour=date.getHours();
+        var minute=date.getMinutes();
+        var second=date.getSeconds();
+        if (hour<10) {
+            hour='0'+hour;
+        }
+        if (minute<10) {
+            minute='0'+minute;
+        }
+        if (second<10) {
+            second='0'+second;
+        }
+
+
+        var x=date.getDay();//获取星期
+
+
+        var time=year+'/'+month+'/'+day+'/'+hour+':'+minute+':'+second
+            tew.innerHTML=time;//将时间显示在div内
+        }
+    getTime();
+    setInterval(getTime,1000);
+//回到顶部
+//当网页向下滑动 20px 出现"返回顶部" 按钮
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+   
+
+    //点击按钮，返回顶部
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+
+
+//输入内容时提示
+var mail=document.getElementsByClassName("mail");
+var subject=document.getElementsByClassName("subject");
+var par1=document.getElementsByClassName("par1");
+var par2=document.getElementsByClassName("par2");
+var par3=document.getElementsByClassName("par3");
+    mail[0].onfocus=function() {
+       par1[0].innerHTML = "input your e-mail Address";
+    }
+    mail[0].onblur=function() {
+        if(mail[0].value==""){
+            par1[0].innerHTML="mail can not be empty";
+        }else{
+            par1[0].innerHTML="";
+        }
+    }
+    subject[0].onfocus=function() {
+       par2[0].innerHTML = "input your subject";
+    }
+    mail[0].onblur=function() {
+        if(mail[0].value==""){
+            par2[0].innerHTML="subject can not be empty";
+        }else{
+            par2[0].innerHTML="";
+        }
+    }
+
+
+ </script>
+</html>
